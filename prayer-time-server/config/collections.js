@@ -1,18 +1,8 @@
 const { client } = require("./db");
 
-const database = client.db("workSyncDB");
+const database = client.db("prayerTimeDB");
 
-const usersCollection = database.collection("users");
-const workCollection = database.collection("workSheet");
-const payrollCollection = database.collection("payroll");
-const employeeCollection = database.collection("employees");
-const contactMessageCollection = database.collection("contactMessages");
-const attendanceCollection = database.collection("attendance");
+const locationsCollection = database.collection("locations");
 module.exports = {
-  usersCollection,
-  workCollection,
-  payrollCollection,
-  employeeCollection,
-  contactMessageCollection,
-  attendanceCollection
+  locationsCollection,
 };
