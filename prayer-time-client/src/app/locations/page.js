@@ -4,7 +4,7 @@ import DivitionsClick from "../components/DivitionsClick";
 
 const getDivisions = async () => {
   try {
-    const res = await axiosInstance.get("/locations/divisions"); // Your backend route
+    const res = await axiosInstance.get("/locations/divisions");  
     return res.data;
   } catch (error) {
     console.error("Error fetching divisions:", error);

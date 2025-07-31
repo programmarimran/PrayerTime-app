@@ -17,7 +17,10 @@ export default function Navbar() {
         <h1 className="text-xl font-bold">🕌 PrayerTime</h1>
         <ul className="flex gap-6">
           {navItems.map((item) => (
-            <li key={item.path}>
+            <li
+              key={item.path}
+              className={item.name === "About" ? "hidden md:block" : ""}
+            >
               <Link
                 href={item.path}
                 className={`hover:text-yellow-300 transition ${
