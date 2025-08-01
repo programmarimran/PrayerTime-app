@@ -14,8 +14,12 @@ export default function Navbar() {
   return (
     <nav className="bg-gray-800 text-white px-6 py-4 shadow-md">
       <div className="max-w-6xl mx-auto flex justify-between items-center">
-        <h1 className="text-xl font-bold">🕌 PrayerTime</h1>
-        <ul className="flex gap-6">
+        <Link href={"/"}>
+          <h1 className="text-xl flex gap-1 font-bold">
+            <span className=" md:flex">🕌</span> PrayerTime
+          </h1>
+        </Link>
+        <ul className="flex gap-3 md:gap-6">
           {navItems.map((item) => (
             <li
               key={item.path}

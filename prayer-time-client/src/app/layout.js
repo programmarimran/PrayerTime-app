@@ -1,6 +1,11 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
+import CurrentTime from "./components/CurrentTime";
+import PrayerTimes from "./components/PrayerTimes";
+import NextPrayerCountdown from "./components/NextPrayerCountdown";
+import PrayerCalendar from "./components/PrayerCalender";
+import DailyHadith from "./components/DailyHadith";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,14 +29,23 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-slate-50 text-slate-800`}
       >
+        {/* === Navbar === */}
         <Navbar />
-        <main className="max-w-7xl mx-auto min-h-[calc(100vh-148px)] px-4 py-8">
-          {children}
-        </main>
 
-        <footer className="bg-gray-800 text-white text-center py-4 mt-8">
+        {/* === Main Container === */}
+        <div className="bg-slate">
+          <main className="max-w-7xl mx-auto min-h-[calc(100vh-100px)] px-4 py-8 space-y-8">
+
+           
+            {/* === Children (Dynamic Pages) === */}
+            {children}
+          </main>
+        </div>
+
+        {/* === Footer === */}
+        <footer className="bg-gray-800 text-white text-center py-4">
           <p>&copy; {new Date().getFullYear()} PrayerTime App</p>
         </footer>
       </body>

@@ -1,7 +1,7 @@
 import PrayerTimeCard from "@/app/components/PrayerTimeCard";
 
 
-export default function CityPrayerPage({ params }) {
+export default async function CityPrayerPage({ params }) {
   const { city } = params;
 
   return (
